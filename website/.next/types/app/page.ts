@@ -1,4 +1,4 @@
-// File: /Users/rotembm12/Desktop/craftonite/website/src/app/page.jsx
+// File: C:\projects\craftonite\website\src\app\page.jsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

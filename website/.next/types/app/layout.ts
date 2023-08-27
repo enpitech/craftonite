@@ -1,4 +1,4 @@
-// File: /Users/rotembm12/Desktop/craftonite/website/src/app/layout.jsx
+// File: C:\projects\craftonite\website\src\app\layout.jsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
