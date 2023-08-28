@@ -1,2 +1,4 @@
 node_modules
 .DS_Store
+# add the folder .next to the .gitignore file
+.next
