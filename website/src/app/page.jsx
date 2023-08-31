@@ -1,7 +1,7 @@
 import { Author } from '@/components/Author'
 import { Footer } from '@/components/Footer'
 import { FreeChapters } from '@/components/FreeChapters'
-import { Hero } from '@/components/Hero'
+import Hero from '@/components/Hero'
 import { Introduction } from '@/components/Introduction'
 import { NavBar } from '@/components/NavBar'
 import { Pricing } from '@/components/Pricing'
