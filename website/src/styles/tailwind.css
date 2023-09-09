@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .subscribe-form-input {
+    @apply py-1 px-1 text-black rounded-lg
+    border border-gray-500 border-solid
+  }
+}
