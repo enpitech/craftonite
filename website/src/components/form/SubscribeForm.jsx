@@ -3,11 +3,12 @@
 import { FormService } from '@/services/FormService'
 
 import * as yup from 'yup'
+import SubscribeFormItem from './SubscribeFormItem'
 
 export const SubscribeForm = () => {
   const schema = yup.object({
-    firstName: yup.string().required().min(8),
-    lastName: yup.string().required().min(4),
+    firstName: yup.string().required().min(2),
+    lastName: yup.string().required().min(2),
     email: yup.string().email().required(),
   })
 
@@ -18,49 +19,56 @@ export const SubscribeForm = () => {
   } = FormService(schema)
 
   const onSubmit = (data) => console.log(data)
-
   return (
-    <form
-      className="center grid grid-cols-2 gap-4"
-      onSubmit={handleSubmit(onSubmit)}
-    >
-      <div className="col-span-1 w-full">
-        <input
-          {...register('firstName')}
+    <div className="bg-gray round mx-auto max-w-lg rounded-lg  border-r-2 bg-gray-200 p-4 mt-4 mb-4">
+      <h1 className="mb-4 text-center font-display text-5xl font-extrabold text-slate-900 sm:text-4xl">
+        Subscribe
+      </h1>
+      <form
+        className="grid grid-cols-2 gap-5"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <SubscribeFormItem
+          className={'col-span-1 w-full'}
+          label="First Name"
+          name="firstName"
+          register={register}
           placeholder="First Name"
-          className="subscribe-form-input w-full"
+          errors={errors}
         />
-        <p>{errors.firstName?.message}</p>
-      </div>
 
-      <div className="col-span-1 w-full">
-        <input
-          {...register('lastName')}
-          placeholder="Last name"
-          className="subscribe-form-input w-full"
+        <SubscribeFormItem
+          className={'col-span-1 w-full'}
+          label="Last Name"
+          name="lastName"
+          register={register}
+          placeholder="Last Name"
+          errors={errors}
         />
-        <p>{errors.lastName?.message}</p>
-      </div>
 
-      <div className="col-span-2 w-full">
-        <input
-          {...register('email')}
+        <SubscribeFormItem
+          className={'col-span-2 w-full'}
+          label="Email address"
+          name="email"
+          register={register}
           placeholder="Email"
-          className="subscribe-form-input w-full"
+          errors={errors}
         />
-        <p>{errors.email?.message}</p>
-      </div>
 
-      <div className="col-span-2 w-full">
-        <input
-          {...register('phone')}
+        <SubscribeFormItem
+          className={'col-span-2 w-full'}
+          label="Phone number (optional)"
+          name="phone"
+          register={register}
           placeholder="Phone number - optional"
-          className="subscribe-form-input w-full"
+          errors={errors}
         />
-        <p>{errors.phone?.message}</p>
-      </div>
 
-      <input type="submit" className="col-span-2 " />
-    </form>
+        <input
+          type="submit"
+          className="col-span-2 mx-auto rounded-lg bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-600"
+        />
+      </form>
+    </div>
   )
 }
