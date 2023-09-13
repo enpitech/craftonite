@@ -20,8 +20,8 @@ export const SubscribeForm = () => {
 
   const onSubmit = (data) => console.log(data)
   return (
-    <div className="bg-gray round mx-auto max-w-lg rounded-lg  border-r-2 bg-gray-200 p-4 mt-4 mb-4">
-      <h1 className="mb-4 text-center font-display text-5xl font-extrabold text-slate-900 sm:text-4xl">
+    <div className="bg-gray round mx-auto mb-4 mt-4  max-w-lg rounded-lg border-r-2 bg-gray-200 p-4">
+      <h1 className="mb-4 text-center font-display text-3xl font-extrabold text-slate-900 sm:text-4xl">
         Subscribe
       </h1>
       <form

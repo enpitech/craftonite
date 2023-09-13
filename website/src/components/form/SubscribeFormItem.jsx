@@ -16,7 +16,7 @@ const SubscribeFormItem = ({
         placeholder={placeholder}
         className="subscribe-form-input w-full"
       />
-      <p className={`h-4 text-red-700`}>{errors[name]?.message}</p>
+      <p className="h-4 text-red-700">{errors[name]?.message}</p>
     </div>
   )
 }
